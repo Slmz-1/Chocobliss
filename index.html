@@ -1,67 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ChocoBliss — One Bite, Infinite Bliss.</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Chocolate dust canvas -->
 <canvas id="particles"></canvas>
 
+<!-- BRAND HEADER -->
 <header>
-  <img class="logo" src="https://raw.githubusercontent.com/salem-sketch/Chocobliss/refs/heads/main/3EAB64AC-D863-42CA-9662-82CF07198D92.png" alt="ChocoBliss C logo">
+  <img class="logo" src="https://raw.githubusercontent.com/salem-sketch/Chocobliss/refs/heads/main/3EAB64AC-D863-42CA-9662-82CF07198D92.png" alt="ChocoBliss C logo" />
   <h1>ChocoBliss</h1>
   <p class="tag">One Bite, Infinite Bliss.</p>
 </header>
 
+<!-- NAV -->
 <nav>
   <a href="index.html">Home</a>
   <a href="flavors.html">Flavors</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
-  <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+  <a href="checkout.html">Checkout</a>
+  <button id="cartBtn">🛒 Cart</button>
 </nav>
 
-<!-- Cart Popup -->
-<div id="cartItems">
-  <h3>Your Cart</h3>
-  <ul id="cartList"></ul>
-  <p id="cartTotal">Total: $0.00</p>
-  <button class="pay-btn">Apple Pay</button>
-  <button class="pay-btn">Tabby</button>
-  <button class="pay-btn">Tamara</button>
-</div>
-
+<!-- HOME -->
 <section id="home" class="fade-in">
-  <h2>Welcome to ChocoBliss</h2>
+  <h2>Welcome</h2>
   <p class="lead">
-    ChocoBliss is crafted with **premium cocoa, natural ingredients, and artisanal love**. Each bar is a promise of joy, smooth texture, and a taste that delights your senses. Our small-batch chocolates are perfect for gifting, sharing, or treating yourself to a moment of pure bliss.
+    Crafted from premium cocoa and natural ingredients, ChocoBliss turns every moment into a celebration.
+    Explore our signature flavors in the Flavors section—each with its own story and clean ingredient list.
   </p>
-
-  <h2>Featured Flavors</h2>
-  <div class="menu">
-    <article class="menu-item">
-      <img src="https://raw.githubusercontent.com/salemhasansalem9-hub/ChocoBliss/refs/heads/main/B99C7719-4319-4E15-8A1B-7D3B4DF088CE.png" alt="Milk Bliss bar">
-      <h3>Milk Bliss</h3>
-      <p class="desc">Classic, creamy milk chocolate—smooth and comforting.</p>
-      <span class="price">$3.50</span>
-    </article>
-    <article class="menu-item">
-      <img src="https://raw.githubusercontent.com/salemhasansalem9-hub/ChocoBliss/refs/heads/main/C649EF3D-C594-42EA-A643-193CA958300A.png" alt="Dark Bliss bar">
-      <h3>Dark Bliss</h3>
-      <p class="desc">Rich 70% cocoa—bold, balanced intensity.</p>
-      <span class="price">$4.00</span>
-    </article>
-  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  © 2025 ChocoBliss • Please recycle ♻️
+  <p>© 2025 ChocoBliss — All rights reserved</p>
+  <div class="socials">
+    <a href="https://www.instagram.com/chocobliss" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+    <a href="https://www.facebook.com/chocobliss" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+    <a href="https://twitter.com/chocobliss" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" /></a>
+    <a href="https://wa.me/123456789" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
+  </div>
 </footer>
-
-<button id="backToTop">↑</button>
 
 <script src="main.js"></script>
 </body>
