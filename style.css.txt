@@ -1,0 +1,304 @@
+/* ===================== BASE ===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, Arial, sans-serif;
+  background: #fff8f0;
+  color: #3e2723;
+  overflow-x: hidden;
+}
+
+/* ===================== CHOCOLATE DUST CANVAS ===================== */
+#particles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: #fff8f0;
+}
+
+/* ===================== HEADER ===================== */
+header {
+  padding: 2rem 1rem 1.25rem;
+  text-align: center;
+}
+
+header img.logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.6rem;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.2rem;
+}
+
+header p.tag {
+  color: #6d4c41;
+  font-size: 1.1rem;
+}
+
+/* ===================== NAVIGATION ===================== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #3e2723;
+  padding: 0.85rem 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ffcc80;
+}
+
+nav button {
+  background: #ff7043;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  color: #fff;
+  font-weight: 600;
+  margin-left: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+nav button:hover {
+  background: #ff5722;
+}
+
+/* ===================== SECTIONS ===================== */
+section {
+  padding: 3.2rem 1.25rem;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.6rem;
+  color: #4e342e;
+}
+
+.lead {
+  max-width: 780px;
+  margin: 0 auto 0;
+  text-align: center;
+  color: #5d4037;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ===================== FLAVORS GRID ===================== */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1rem 1rem 1.1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.menu-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.16);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+}
+
+.menu-item h3 {
+  margin: 0.2rem 0 0.25rem;
+  color: #3e2723;
+}
+
+.menu-item p.desc {
+  opacity: 0.92;
+  margin-bottom: 0.45rem;
+}
+
+.price {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-weight: 800;
+  color: #ff7043;
+}
+
+.add-cart {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.4rem 0.8rem;
+  background: #ff7043;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-cart:hover {
+  background: #ff5722;
+}
+
+/* ===================== DETAILS / INGREDIENTS ===================== */
+details {
+  margin-top: 0.6rem;
+  border-top: 1px dashed rgba(0,0,0,0.1);
+  padding-top: 0.6rem;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+details p {
+  margin: 0.45rem 0 0;
+}
+
+ul.ing {
+  margin: 0.35rem 0 0 1.1rem;
+}
+
+ul.ing li {
+  margin: 0.18rem 0;
+}
+
+/* ===================== FADE-IN ===================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================== CART ===================== */
+#cartItems {
+  display: none;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background: #fff8f0;
+  border: 2px solid #ff7043;
+  padding: 1rem;
+  border-radius: 10px;
+  z-index: 20;
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+#cartItems h3 {
+  margin-bottom: 0.6rem;
+}
+
+#cartItems ul {
+  list-style: none;
+  margin-bottom: 0.6rem;
+}
+
+#cartItems li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+#cartItems li button {
+  background: #ff7043;
+  border: none;
+  padding: 0.2rem 0.4rem;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#cartItems li button:hover {
+  background: #ff5722;
+}
+
+.pay-btn {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin-top: 0.35rem;
+  margin-right: 0.35rem;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.pay-btn:hover {
+  background: #43a047;
+}
+
+/* ===================== BACK TO TOP ===================== */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 15;
+  background: #ff7043;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+#backToTop:hover {
+  background: #ff5722;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: #3e2723;
+  color: #fff;
+  text-align: center;
+  padding: 1.25rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
